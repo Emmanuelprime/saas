@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block tittle %}Saas{% endblock tittle %}
+
+{% block content %}
+<h1> Hello welcome to the home page</h1>
+<p> {{page_title}} </p>
+{% if request.user.is_authenticated %}
+    <p> the user is logged in </p>
+{% else %}
+    <p> the user is not logged in </p>
+{% endif %}
+{% endblock content %}
